@@ -426,24 +426,7 @@ public class ImagePickerDelegate
 
     @Override
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case REQUEST_CODE_CHOOSE_IMAGE_FROM_GALLERY:
-                handleChooseImageResult(resultCode, data);
-                break;
-            case REQUEST_CODE_TAKE_IMAGE_WITH_CAMERA:
-                handleCaptureImageResult(resultCode);
-                break;
-            case REQUEST_CODE_CHOOSE_VIDEO_FROM_GALLERY:
-                handleChooseVideoResult(resultCode, data);
-                break;
-            case REQUEST_CODE_TAKE_VIDEO_WITH_CAMERA:
-                handleCaptureVideoResult(resultCode);
-                break;
-            default:
-                return false;
-        }
-
-        return true;
+        return false;
     }
 
     private void handleChooseImageResult(int resultCode, Intent data) {
