@@ -521,7 +521,9 @@ public class ImagePickerDelegate
         uiThreadHandler.post(new Runnable() {
             @Override
             public void run() {
-                result.success(imagePath);
+                if (result != null) {
+                    result.success(imagePath);
+                }
             }
         });
         clearMethodCallAndResult();
